@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
 
 .wrapper {
@@ -28,7 +29,7 @@
     z-index: 0;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* align-items: center; */
     transition: all 0.5s;
 }
@@ -58,16 +59,18 @@
     width: 300px;
     height: 100px;
     transition: all 0.5s;
+    z-index: 3;
 }
 
 .letter {
     background-color: yellow;
     width: 280px;
     height: 300px;
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 100px;
-    transition: all 1s;
+    top: 0;
+    transition: all 1s 0.7s;
+    z-index: 2;
 
 }
 
@@ -107,13 +110,13 @@
 }
 
 .all:hover>.wrapper>.letter {
-    transform: translateY(-200%);
+    transform: translateY(-100px);
 }
 
 
 
 .wrapper:hover>.letter {
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
 }
 
 .wrapper:hover>.door {}
